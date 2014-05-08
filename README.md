@@ -6,7 +6,7 @@ Super lightweight Zero configuration sqlite-based key => value store with expira
 Basically its a simple key value storage with and expireation field which will delete the value after it expires.
 Also since its heavily influenced by redis, some of redis useful functions were implemented.
 
-Stable Version 0.1
+Stable Version [![PHP version](https://badge.fury.io/ph/bainternet%2Fsqlite-simple-store.svg)](http://badge.fury.io/ph/bainternet%2Fsqlite-simple-store)
 
 [![Analytics](https://ga-beacon.appspot.com/UA-50573135-8/SQLite-simple-store/main)](https://github.com/bainternet/SQLite-simple-store)
 
