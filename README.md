@@ -67,7 +67,7 @@ Add the following to the composer.json file..
 ```
 
 ###manual
-	    simply [download the latest version][1] and include it.
+simply [download the latest version][1] and include it.
 
 ##Methods
 ####get($key,$default)
