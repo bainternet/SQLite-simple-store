@@ -1,7 +1,6 @@
 {
     "name": "bainternet/SQLite-simple-store",
-    "description": "Super lightweight Zero configuration sqlite-based key => value store with expiration time for PHP. Basically its a simple key value storage with and expireation field which will delete the value after it expires.
-Also since its heavily influenced by redis, some of redis useful functions were implemented.",
+    "description": "Super lightweight Zero configuration sqlite-based key => value store with expiration time for PHP. Basically its a simple key value storage with and expireation field which will delete the value after it expires. Also since its heavily influenced by redis, some of redis useful functions were implemented.",
     "keywords": ["sqlite", "nosqlite"],
     "homepage": "https://github.com/bainternet/SQLite-simple-store/",
     "type": "library",
