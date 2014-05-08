@@ -1,4 +1,4 @@
-#.travis.yml
+# travis.yml
 language: php
 
 # list any PHP version you want to test against
