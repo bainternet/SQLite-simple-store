@@ -32,7 +32,7 @@ $s->set('token','asdjjrt788dsfjjj447586',6000);
 $s->set('name','ohad');
 
 //get all keys
-var_dump($->keys());
+var_dump($s->keys());
 
 //set a more complex value
 $s->set('user_1',
