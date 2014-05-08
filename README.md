@@ -8,6 +8,7 @@ Also since its heavily influenced by redis, some of redis useful functions were 
 
 Stable Version 0.1
 
+[![Analytics](https://ga-beacon.appspot.com/UA-50573135-8/SQLite-simple-store/main)](https://github.com/bainternet/SQLite-simple-store)
 
 ##Usage
 
