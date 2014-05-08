@@ -57,7 +57,7 @@ Add the following to the composer.json file..
 ```
 	{
 	    "require": {
-	        "agentejo/SQLite-simple-store": "dev-master"
+	        "bainternet/sqlite-simple-store": "dev-master"
 	    }
 	}
 ```
