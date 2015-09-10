@@ -8,10 +8,14 @@
     "authors": [
         {
             "name": "Ohad Raz",
-            "homepage": "http://en.bainternet.info/"
+            "homepage": "https://en.bainternet.info/",
+            "role": "Creator/Developer"
         }
     ],
     "support": {
         "issues": "https://github.com/bainternet/SQLite-simple-store/issues"
+    },
+    "autoload": {
+        "files": ["SQLite_simple_store.php"]
     }
 }
