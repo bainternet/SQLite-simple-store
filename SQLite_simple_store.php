@@ -11,7 +11,7 @@
  *  
  *
  * @author Ohad Raz <admin@bainternet.info>
- * @version 0.1.3
+ * @version 0.1.4
  */
 class SQLite_simple_store {
     /**
@@ -33,15 +33,7 @@ class SQLite_simple_store {
      * 
      */
     function __construct($tableName = '', $filePath = 'db.sqlite') {
-        $this->tableName = sqlite_escape_string($tableName);
-        if (is_numeric($tableName[0])) {
-            $details = sprintf(
-                "sqlite will choke on table names that start w/ a number.  yours starts w/ '%s'",
-                $tableName[0]
-            );
-            throw new Exception($details);
-        }
-        $this->tableName = $tableName;
+        $this->tableName = $this->validate_table_name( $tableName );
         $this->db = new PDO('sqlite:'.$filePath);
         $this->create_table();
     }
@@ -344,5 +336,18 @@ class SQLite_simple_store {
         if($idx < 0)
             $idx = count($tmp) - abs(idx);
         return isset($tmp[$idx]) ? $tmp[$idx] : null;
+    }
+
+    /**
+     * validate_table_name 
+     * @param  string $table_name 
+     * @return string valid table name
+     */
+    function validate_table_name( $table_name ){
+        //first char canot be a digit
+        $table_name = is_numeric( substr( $table_name, 0, 1 ) )? '_' . $table_name : $table_name;
+        //replace - and . with _
+        return str_replace(array("-","."), array("-","-"), $table_name );
+
     }
 }//end class
