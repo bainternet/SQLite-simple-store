@@ -11,7 +11,7 @@
  *  
  *
  * @author Ohad Raz <admin@bainternet.info>
- * @version 0.1.2
+ * @version 0.1.3
  */
 class SQLite_simple_store {
     /**
@@ -252,7 +252,7 @@ class SQLite_simple_store {
      * @return int
      */
     function incr($key,$by = 1){
-        return $this->set($key, ( (int)$this->get($key) + $by ) )
+        return $this->set($key, ( (int)$this->get($key) + $by ) );
     }
 
     /**
