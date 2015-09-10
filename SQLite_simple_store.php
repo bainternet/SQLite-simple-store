@@ -11,7 +11,7 @@
  *  
  *
  * @author Ohad Raz <admin@bainternet.info>
- * @version 0.1.4
+ * @version 0.1.5
  */
 class SQLite_simple_store {
     /**
@@ -102,8 +102,9 @@ class SQLite_simple_store {
         $q = $this->db->prepare(
             "REPLACE INTO $this->tableName VALUES (:key, :value, :exp);"
         );
+        $json_val = json_encode($value);
         $q->bindParam(':key', $key, PDO::PARAM_STR);
-        $q->bindParam(':value', json_encode($value), PDO::PARAM_STR);
+        $q->bindParam(':value', $json_val, PDO::PARAM_STR);
         $q->bindParam(':exp', $exp, PDO::PARAM_STR);
         $q->execute();
         return $this;        
