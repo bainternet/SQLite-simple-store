@@ -11,7 +11,7 @@
  *  
  *
  * @author Ohad Raz <admin@bainternet.info>
- * @version 0.1.1
+ * @version 0.1.2
  */
 class SQLite_simple_store {
     /**
