@@ -68,7 +68,7 @@ class SQLite_simple_store {
      * @param  mixed  $def
      * @return mixed
      */
-    function get($key,$def = false;) {
+    function get($key,$def = false) {
         if (!is_string($key)) {
             throw new Exception('Expected string as key');
         }
