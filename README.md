@@ -10,7 +10,7 @@ Stable Version [![PHP version](https://badge.fury.io/ph/bainternet%2Fsqlite-simp
 
 [![Analytics](https://ga-beacon.appspot.com/UA-50573135-8/SQLite-simple-store/main)](https://github.com/bainternet/SQLite-simple-store)
 
-##Usage
+## Usage
 
 ```php
 <?php 
@@ -49,8 +49,11 @@ $s->set('user_1',
 
 ```
 
-##Installation
-###composer
+
+## Installation
+
+### composer
+
 To install and use via the composer PHP package manager just take these steps:
 
 If you don’t already have one, create the file composer.json in the root of your new project that is going to use SQLite-simple-store.
@@ -62,44 +65,60 @@ Add the following to the composer.json file..
 	    }
 	}
 ```
-###git
-```
+
+### git
+```bash
 	git clone https://github.com/bainternet/SQLite-simple-store.git
 ```
 
-###manual
+
+## Manual
+
 simply [download the latest version][1] and include it.
 
-##Methods
-####get($key,$default)
+## Methods
+
+#### get($key,$default)
     gets a specific value based on key, if the value has expired false will be returned. you can pass a default value as a second parameter to be returned if no value exists or is expired.
-####set($key,$value)
+
+#### set($key,$value)
     stores a value in the database.
-####del($key)
+
+#### del($key)
     Deletes a value of the given key.
-####keys($validate)
+
+#### keys($validate)
     get all keys in the db.
     if $validate is true (default) expired keys and values will get deleted and will not be returned. set $validate to false to get all keys even if they have expired.
-####exists($key)
+
+#### exists($key)
     checks if a key exists and is not expired
-####get_all($validate)
+
+#### get_all($validate)
     get all values in the db.
     if $validate is true (default) expired values will get deleted and will not be returned. set $validate to false to get all values even if they have expired.
-####delete_all()
+
+#### delete_all()
     deletes all values from db.
-####incr($key,$by = 1)
+
+#### incr($key,$by = 1)
     increment value by $by (default = 1).
-####decr($key,$by = 1)
+
+#### decr($key,$by = 1)
     decrement value by (default = 1).
-####count($key)
+
+#### count($key)
     returns the count of elements in a key assuming it is an array or object.
-####rpush($key,$value)
+
+#### rpush($key,$value)
     adds an element to a key (right).
-####lpush($key,$value)
+#### lpush($key,$value)
     adds an element to a key (left).
-####lset($key,$idx,$value)
+
+#### lset($key,$idx,$value)
     sets the value of an element in a key by index.
-####lindex($key,$idx)
+
+#### lindex($key,$idx)
     gets an element from a key by its index.
 
 
